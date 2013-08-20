@@ -1,0 +1,22 @@
+# ~/.tmuxinator/captainhook.yml
+# you can make as many tabs as you wish...
+
+project_name: Captain Hook
+project_root: ~/projects/cicayda/captainhook/
+tabs:
+  - vim:
+      layout: main-vertical
+      panes:
+        - vim project.clj
+  - shell:
+      layout: main-vertical
+      panes:
+        - # empty
+  - server:
+      layout: main-vertical
+      panes:
+        - lein ring server-headless
+  - repl:
+      layout: main-vertical
+      panes:
+        - lein repl

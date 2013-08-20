@@ -1,0 +1,18 @@
+# ~/.tmuxinator/fermata.yml
+# you can make as many tabs as you wish...
+
+project_name: Fermata
+project_root: ~/projects/cicayda/fermata/
+tabs:
+  - shell:
+      layout: main-vertical
+      panes:
+        - gvim project.clj
+  - cljsbuild:
+      layout: main-vertical
+      panes:  
+        - lein do cljsbuild clean, cljsbuild auto
+  - server:
+      layout: main-vertical
+      panes:
+        - lein ring server-headless

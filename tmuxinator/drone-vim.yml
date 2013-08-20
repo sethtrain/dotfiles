@@ -1,0 +1,34 @@
+# ~/.tmuxinator/drone.yml
+# you can make as many tabs as you wish...
+
+project_name: Drone
+project_root: ~/projects/cicayda/analytics-engine/
+tabs:
+  - vim:
+      layout: main-vertical
+      panes:
+        - vim project.clj 
+  - shell:
+      layout: main-vertical
+      panes:
+        - # empty
+  - cljsbuild:
+      layout: main-vertical
+      panes:
+        - lein do cljsbuild clean, cljsbuild auto
+  - less:
+      layout: main-vertical
+      panes:
+        - watchr watchr/less.watch
+  - server:
+      layout: main-vertical
+      panes:
+        - lein with-profile ring-nrepl ring server-headless
+  - datomic:
+      layout: main-vertical
+      panes:
+        - cd ~/projects/datomic-pro-0.8.3848 && bin/transactor config/samples/sql-transactor-template.properties
+  - elasticsearch:
+      layout: main-vertical
+      panes:
+        - cd ~/projects/elasticsearch-0.20.6 && bin/elasticsearch -f

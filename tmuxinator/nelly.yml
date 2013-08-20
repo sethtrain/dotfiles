@@ -1,0 +1,18 @@
+# ~/.tmuxinator/nelly.yml
+# you can make as many tabs as you wish...
+
+project_name: Nelly
+project_root: ~/projects/buntin/nelly/
+tabs:
+  - shell:
+      layout: main-vertical
+      panes:
+        - open -a /Applications/Emacs.app project.clj
+  - server:
+      layout: main-vertical
+      panes:
+        - lein ring server-headless
+  - cljsbuild:
+      layout: main-vertical
+      panes:
+        - lein cljsbuild clean && lein cljsbuild auto

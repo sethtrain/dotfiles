@@ -1,0 +1,22 @@
+# ~/.tmuxinator/raven-clj.yml
+# you can make as many tabs as you wish...
+
+project_name: Raven
+project_root: ~/projects/cicayda/raven-clj/
+tabs:
+  - vim:
+      layout: main-vertical
+      panes:
+        - vim project.clj
+  - shell:
+      layout: main-vertical
+      panes:
+        - # empty
+  - sentry:
+      layout: main-vertical
+      panes:
+        - source venv/bin/activate && sentry --config=venv/etc/sentry.conf.py start
+  - repl:
+      layout: main-vertical
+      panes:
+        - lein repl
