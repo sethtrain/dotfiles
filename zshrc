@@ -73,7 +73,7 @@ alias e="open -a /Applications/Emacs.app"
 # VirtualEnv
 # source /usr/local/bin/virtualenvwrapper.sh
 
-source .passwords
+source ~/.passwords
 
 # Add NPM bins to path
 export PATH=/usr/local/share/npm/bin/:$PATH
