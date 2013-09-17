@@ -7,7 +7,7 @@ tabs:
   - vim:
       layout: main-vertical
       panes:
-        - vim project.clj 
+        - vim project.clj
   - shell:
       layout: main-vertical
       panes:
@@ -32,3 +32,7 @@ tabs:
       layout: main-vertical
       panes:
         - cd ~/projects/elasticsearch-0.20.6 && bin/elasticsearch -f
+  - import:
+      layout: main-vertical
+      panes:
+        - lein trampoline run -m analytics-engine.import.core

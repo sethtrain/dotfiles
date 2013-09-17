@@ -19,7 +19,7 @@ tabs:
   - server:
       layout: main-vertical
       panes:
-        - lein with-profile ring-nrepl ring server-headless
+        - lein with-profile +ring-nrepl ring server-headless
   - datomic:
       layout: main-vertical
       panes:
