@@ -7,5 +7,3 @@
 --regex-clojure=/\([ \t]*defmethod[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/b,multimethod instance/
 --regex-clojure=/\([ \t]*defonce[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/c,definition (once)/
 --regex-clojure=/\([ \t]*ns[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/n,namespace/
---regex-clojure=/\([ \t]*wontcatchme[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/o,other/
---regex-clojure=/\([ \t]*wontcatchmeeither[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/r,requirement/
