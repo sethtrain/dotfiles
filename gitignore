@@ -20,3 +20,4 @@ settings.clj
 resources/less/exoskeleton
 tags
 projectile-bookmarks.eld
+ac-comphist.dat
