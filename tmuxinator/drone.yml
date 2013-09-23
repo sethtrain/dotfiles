@@ -23,7 +23,7 @@ tabs:
   - datomic:
       layout: main-vertical
       panes:
-        - cd ~/projects/datomic-pro-0.8.3848 && bin/transactor config/samples/sql-transactor-template.properties
+        - cd ~/projects/datomic-pro-0.8.3848 && bin/transactor config/samples/dev-transactor-template.properties
   - elasticsearch:
       layout: main-vertical
       panes:
