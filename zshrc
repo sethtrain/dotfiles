@@ -39,7 +39,8 @@ function zle-line-finish {
 }
 zle -N zle-line-finish
 
-bindkey -M viins 'jj' vi-cmd-mode
+# bindkey -M viins 'jj' vi-cmd-mode
+bindkey -M vicmd '?' history-incremental-search-backward
 
 RPROMPT='${vim_mode}'
 
@@ -105,3 +106,7 @@ export PATH=/Applications/microchip/xc8/v1.20/bin:$PATH
 export GOROOT=~/src/go
 export GOPATH=~/projects/go/libraries
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+# Java
+export JVM_OPTS="-Xmx6g"
+export JAVA_OPTS=$JVM_OPTS

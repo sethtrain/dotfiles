@@ -16,11 +16,7 @@ tabs:
       layout: main-vertical
       panes:  
         - lein do cljsbuild clean, cljsbuild auto
-  - server:
+  - servers:
       layout: main-vertical
       panes:
-        - lein ring server-headless
-  - repl:
-      layout: main-vertical
-      panes:
-        - lein repl
+        - lein with-profile +ring-nrepl ring server-headless

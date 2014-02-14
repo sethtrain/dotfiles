@@ -1,0 +1,18 @@
+# ~/.tmuxinator/chip.yml
+# you can make as many tabs as you wish...
+
+project_name: Chip
+project_root: ~/projects/buntin/chip.web/
+tabs:
+  - shell:
+      layout: main-vertical
+      panes:
+        - idea .
+  - cljsbuild:
+      layout: main-vertical
+      panes:
+        - lein do cljsbuild clean, cljsbuild auto
+  - servers:
+      layout: main-vertical
+      panes:
+        - # empty
