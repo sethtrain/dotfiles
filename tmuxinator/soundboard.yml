@@ -1,0 +1,22 @@
+# ~/.tmuxinator/soundboard.yml
+# you can make as many tabs as you wish...
+
+project_name: Soundboard
+project_root: ~/projects/cicayda/soundboard/
+tabs:
+  - shell:
+      layout: main-vertical
+      panes:
+        - idea .
+  - cljsbuild:
+      layout: main-vertical
+      panes:
+        - lein do cljsbuild clean, cljsbuild auto
+  - less:
+      layout: main-vertical
+      panes:
+        - watchr watchr/less.watch
+  - servers:
+      layout: main-vertical
+      panes:
+        - lein with-profile +ring-nrepl ring server-headless
