@@ -60,6 +60,9 @@ export TERM="xterm-256color"
 # Customize to your needs...
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
 
+# 10ms for key sequences
+KEYTIMEOUT=1
+
 # Tmuxinator
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 export SHELL=/bin/zsh
