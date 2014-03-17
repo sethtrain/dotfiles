@@ -12,3 +12,12 @@ tabs:
       layout: main-vertical
       panes:
         - # shell
+  - socks:
+      layout: main-vertical
+      panes:
+        - ssh -N socks
+  - bastion:
+      layout: main-vertical
+      panes:
+        - ssh bastion
+

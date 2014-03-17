@@ -16,7 +16,3 @@ tabs:
       layout: main-vertical
       panes:
         - watchr watchr/less.watch
-  - servers:
-      layout: main-vertical
-      panes:
-        - lein with-profile +ring-nrepl ring server-headless

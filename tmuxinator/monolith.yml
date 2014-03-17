@@ -23,11 +23,6 @@ tabs:
         - cd ~/projects/datomic-pro-0.9.4497 && bin/transactor config/samples/dev-transactor-template.properties
         - cd ~/projects/elasticsearch-0.90.3 && bin/elasticsearch -f
         - rabbitmq-server
-  - logstash:
-      layout: even-vertical
-      panes:
-        - cd ~/projects/cicayda/logstash && java -jar logstash-1.3.3-flatjar.jar web
-        - cd ~/projects/cicayda/logstash && java -jar logstash-1.3.3-flatjar.jar agent -f logstash-simple.conf
   - services:
       layout: main-vertical
       panes:
