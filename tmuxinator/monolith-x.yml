@@ -1,9 +1,9 @@
 # ~/.tmuxinator/drone.yml
 # you can make as many tabs as you wish...
 
-project_name: Drone
-project_root: ~/projects/cicayda/analytics-engine/
-tabs:
+name: Drone
+root: ~/projects/cicayda/analytics-engine/
+windows:
   - shell:
       layout: main-vertical
       panes:

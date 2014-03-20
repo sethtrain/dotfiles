@@ -1,9 +1,9 @@
 # ~/.tmuxinator/nelly.yml
 # you can make as many tabs as you wish...
 
-project_name: Nelly
-project_root: ~/projects/buntin/nelly/
-tabs:
+name: Nelly
+root: ~/projects/buntin/nelly/
+windows:
   - shell:
       layout: main-vertical
       panes:

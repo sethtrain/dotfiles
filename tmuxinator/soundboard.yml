@@ -1,9 +1,9 @@
 # ~/.tmuxinator/soundboard.yml
 # you can make as many tabs as you wish...
 
-project_name: Soundboard
-project_root: ~/projects/cicayda/soundboard/
-tabs:
+name: Soundboard
+root: ~/projects/cicayda/soundboard/
+windows:
   - shell:
       layout: main-vertical
       panes:

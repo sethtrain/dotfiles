@@ -1,9 +1,9 @@
 # ~/.tmuxinator/devops.yml
 # you can make as many tabs as you wish...
 
-project_name: Devops
-project_root: ~/projects/cicayda/devops/
-tabs:
+name: Devops
+root: ~/projects/cicayda/devops/
+windows:
   - vim:
       layout: main-vertical
       panes:
@@ -20,4 +20,8 @@ tabs:
       layout: main-vertical
       panes:
         - ssh bastion
+  - vagrant:
+      layout: main-vertical
+      panes:
+        - cd vagrant/devops
 

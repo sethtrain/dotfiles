@@ -1,9 +1,9 @@
 # ~/.tmuxinator/raven-clj.yml
 # you can make as many tabs as you wish...
 
-project_name: Raven
-project_root: ~/projects/cicayda/raven-clj/
-tabs:
+name: Raven
+root: ~/projects/cicayda/raven-clj/
+windows:
   - emacs:
       layout: main-vertical
       panes:
