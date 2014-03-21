@@ -54,9 +54,6 @@ fi
 HISTSIZE=10000
 SAVEHIST=10000
 
-# Color
-export TERM="xterm-256color"
-
 # Customize to your needs...
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
 
@@ -113,3 +110,6 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 # Java
 export JVM_OPTS="-Xmx6g"
 export JAVA_OPTS=$JVM_OPTS
+
+# Really ansible?
+export ANSIBLE_NOCOWS=1
