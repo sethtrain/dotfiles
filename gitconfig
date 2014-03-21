@@ -1,31 +1,28 @@
 [core]
     editor = vim
     excludesfile = ~/.gitignore
-#[diff]
-#    external = git_diff_wrapper
-#[pager]
-#    diff = 
 [alias]
-    st = status
-    ci = commit
-    co = checkout
-    di = diff
-    dc = diff --cached
-    amend = commit --amend
     aa = add --all
-    head = !git l -1
-    h = !git head
-    r = !git l -20
-    ra = !git r --all
-    ff = merge --ff-only
-    pullff = pull --ff-only
-    l = log --graph --abbrev-commit --date=relative 
-    la = !git l --all
+    amend = commit --amend
+    ci = commit
+    cleanup = !git remote prune origin && git gc && git clean -df && git stash clear
+    co = checkout
+    dc = diff --cached
+    di = diff
     div = divergence
+    fa = fetch --all
+    ff = merge --ff-only
     gn = goodness
     gnc = goodness --cached
-    fa = fetch --all
+    h = !git head
+    head = !git l -1
+    l = log --graph --abbrev-commit --date=relative
+    la = !git l --all
     pom = push origin master
+    pullff = pull --ff-only
+    r = !git l -20
+    ra = !git r --all
+    st = status
 [color]
     branch = auto
     diff = auto
@@ -35,8 +32,6 @@
 [user]
     name = Seth Buntin
     email = seth.buntin@gmail.com
-#[push]
-#    default = simple
 [merge]
     tool = threesome
 [mergetool "threesome"]
@@ -46,7 +41,7 @@
 	default = simple
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
