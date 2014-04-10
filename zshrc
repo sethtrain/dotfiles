@@ -71,9 +71,6 @@ export PATH=~/.gems/bin:$PATH
 # Emacs
 alias e="open -a /Applications/Emacs.app"
 
-# VirtualEnv
-# source /usr/local/bin/virtualenvwrapper.sh
-
 source ~/.passwords
 
 # Add NPM bins to path
@@ -98,14 +95,6 @@ pack-mc() {
     cd ..
     rm -rf mctmp
 }
-
-# XC8
-export PATH=/Applications/microchip/xc8/v1.20/bin:$PATH
-
-# Go
-export GOROOT=~/src/go
-export GOPATH=~/projects/go/libraries
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # Java
 export JVM_OPTS="-Xmx6g"
