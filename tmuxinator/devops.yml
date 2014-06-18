@@ -24,4 +24,7 @@ windows:
       layout: main-vertical
       panes:
         - cd vagrant/devops
-
+  - monolith:
+      layout: main-vertical
+      panes:
+        - cd ../monolith

@@ -12,8 +12,6 @@
     div = divergence
     fa = fetch --all
     ff = merge --ff-only
-    gn = goodness
-    gnc = goodness --cached
     h = !git head
     head = !git l -1
     l = log --graph --abbrev-commit --date=relative

@@ -7,12 +7,21 @@ windows:
   - shell:
       layout: main-vertical
       panes:
-        - vim .
+        - idea .
   - cljsbuild:
       layout: main-vertical
       panes:
-        - lein do cljsbuild clean, cljsbuild auto debug
+        - lein do cljsbuild clean, cljx, cljsbuild auto debug
   - vagrant:
       layout: main-vertical
       panes:
         - cd vagrant/dev && vagrant up
+  - logs:
+      layout: even-vertical
+      panes:
+        - tail -f logs/monolith.log
+        - tail -f logs/appserver.upstart.log
+  - devops:
+      layout: main-vertical
+      panes:
+        - cd ../devops

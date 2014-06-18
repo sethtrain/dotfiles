@@ -102,3 +102,7 @@ export JAVA_OPTS=$JVM_OPTS
 
 # Really ansible?
 export ANSIBLE_NOCOWS=1
+
+alias win="say \"All I Do is win win win no matter what, got money on mind i can never get enough, and everytime I step up in the building, everybody hands go up, and they stay there, and they say yeah, and they stay there, Up down, up down\""
+
+alias git-clean="git remote prune origin && git gc && git clean -df && git stash clear"
