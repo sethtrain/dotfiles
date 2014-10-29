@@ -19,9 +19,13 @@ windows:
   - logs:
       layout: even-vertical
       panes:
-        - tail -f logs/monolith.log
-        - tail -f logs/appserver.upstart.log
+        - ssh dev "tail -f /var/log/monolith/monolith.log"
+        - ssh dev "tail -f /var/log/monolith/appserver.upstart.log"
   - devops:
       layout: main-vertical
       panes:
         - cd ../devops
+  - less:
+      layout: main-vertical
+      panes:
+        - observ watchr/less.watch
