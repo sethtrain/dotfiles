@@ -56,6 +56,7 @@ SAVEHIST=10000
 
 # Customize to your needs...
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
+export EDITOR=vim
 
 # 10ms for key sequences
 KEYTIMEOUT=1
@@ -68,13 +69,10 @@ export SHELL=/bin/zsh
 export GEM_HOME=~/.gems
 export PATH=~/.gems/bin:$PATH
 
-# Emacs
-alias e="open -a /Applications/Emacs.app"
-
 source ~/.passwords
 
 # Add NPM bins to path
-export PATH=/usr/local/share/npm/bin/:$PATH
+export PATH=/usr/local/share/npm/bin:$PATH
 
 # alias to nw
 alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
@@ -97,7 +95,7 @@ pack-mc() {
 }
 
 # Java
-export JVM_OPTS="-Xmx6g"
+export JVM_OPTS="-Xmx6g -XX:MaxPermSize=256M"
 export JAVA_OPTS=$JVM_OPTS
 
 # Really ansible?
@@ -106,3 +104,15 @@ export ANSIBLE_NOCOWS=1
 alias win="say \"All I Do is win win win no matter what, got money on mind i can never get enough, and everytime I step up in the building, everybody hands go up, and they stay there, and they say yeah, and they stay there, Up down, up down\""
 
 alias git-clean="git remote prune origin && git gc && git clean -df && git stash clear"
+
+# Vim
+alias vim="vim -c :NERDTree"
+
+# Emacs
+alias e='emacsclient -t'
+alias ec='emacsclient -c'
+
+# Tmuxifier
+export PATH="$HOME/.tmuxifier/bin:$PATH"
+eval "$(tmuxifier init -)"
+alias mux="tmuxifier load-session"
