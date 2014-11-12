@@ -42,7 +42,7 @@ zle -N zle-line-finish
 # bindkey -M viins 'jj' vi-cmd-mode
 bindkey -M vicmd '?' history-incremental-search-backward
 
-RPROMPT='${vim_mode}'
+RPROMPT=${vim_mode}
 
 # Tab completions
 fpath=(~/.zsh/completion $fpath)
