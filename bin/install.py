@@ -8,8 +8,8 @@ from os.path import islink, join, expanduser
 home = expanduser("~/")
 directory = expanduser("~/dotfiles")
 
-excludes = ["pure", "README.md", ".gitmodules", ".git", "bin"]
-linux_only_excludes = ["Xresources", "xinitrc", "xmobarrc", "xmonad.hs", "zprofile"]
+excludes = ["pure", "README.md", ".gitmodules", ".git", "bin", "tmuxifier-layouts"]
+linux_only_excludes = []
 
 try:
     if sys.argv[1] == "linux":
