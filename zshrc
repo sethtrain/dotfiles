@@ -114,5 +114,6 @@ alias ec='emacsclient -c'
 
 # Tmuxifier
 export PATH="$HOME/.tmuxifier/bin:$PATH"
+export TMUXIFIER_LAYOUT_PATH="$HOME/dotfiles/tmuxifier-layouts"
 eval "$(tmuxifier init -)"
 alias mux="tmuxifier load-session"
