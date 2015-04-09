@@ -23,3 +23,7 @@ projectile-bookmarks.eld
 ac-comphist.dat
 *.iml
 .idea
+jmeter.log
+node_modules
+*.js.map
+npm-debug.log

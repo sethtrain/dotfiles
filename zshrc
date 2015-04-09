@@ -28,16 +28,14 @@ vim_ins_mode="%{$fg[cyan]%}-- INSERT --%{$reset_color%}"
 vim_cmd_mode="%{$fg[green]%}-- NORMAL --%{$reset_color%}"
 vim_mode=$vim_ins_mode
 
-function zle-keymap-select {
-  vim_mode="${${KEYMAP/vicmd/${vim_cmd_mode}}/(main|viins)/${vim_ins_mode}}"
+function zle-line-init zle-keymap-select {
+    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
+    RPS2=$RPS1
     zle reset-prompt
 }
-zle -N zle-keymap-select
 
-function zle-line-finish {
-  vim_mode=$vim_ins_mode
-}
-zle -N zle-line-finish
+zle -N zle-line-init
+zle -N zle-keymap-select
 
 # bindkey -M viins 'jj' vi-cmd-mode
 bindkey -M vicmd '?' history-incremental-search-backward
@@ -106,14 +104,16 @@ alias win="say \"All I Do is win win win no matter what, got money on mind i can
 alias git-clean="git remote prune origin && git gc && git clean -df && git stash clear"
 
 # Vim
-alias vim="vim -c :NERDTree"
+# alias vim="vim -c :NERDTree"
 
 # Emacs
-alias e='emacsclient -t'
-alias ec='emacsclient -c'
+#alias e='emacsclient -t'
+#alias ec='emacsclient -c'
 
 # Tmuxifier
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 export TMUXIFIER_LAYOUT_PATH="$HOME/dotfiles/tmuxifier-layouts"
 eval "$(tmuxifier init -)"
 alias mux="tmuxifier load-session"
+
+fortune | cowsay | lolcat
