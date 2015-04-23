@@ -27,3 +27,4 @@ jmeter.log
 node_modules
 *.js.map
 npm-debug.log
+.python-version
