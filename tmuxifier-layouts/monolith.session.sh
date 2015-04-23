@@ -1,7 +1,7 @@
 session_root "~/projects/cicayda/monolith"
 
 if initialize_session "monolith"; then
-  load_window "vim"
+  load_window "mvim"
   load_window "shell"
   load_window "cljsbuild"
   load_window "monolith-logs"
