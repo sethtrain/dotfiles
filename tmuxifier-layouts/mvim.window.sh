@@ -1,2 +1,2 @@
-new_window "mvim/shell"
+new_window "shell"
 run_cmd "mvim"
