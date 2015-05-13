@@ -1,4 +1,4 @@
-# Sources
+
 source ~/dotfiles/pure/prompt.zsh
 source ~/.zsh/aliases
 
@@ -117,3 +117,5 @@ eval "$(tmuxifier init -)"
 alias mux="tmuxifier load-session"
 
 fortune | cowsay | lolcat
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
