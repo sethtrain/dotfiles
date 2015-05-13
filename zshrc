@@ -1,4 +1,3 @@
-
 source ~/dotfiles/pure/prompt.zsh
 source ~/.zsh/aliases
 
@@ -116,6 +115,9 @@ export TMUXIFIER_LAYOUT_PATH="$HOME/dotfiles/tmuxifier-layouts"
 eval "$(tmuxifier init -)"
 alias mux="tmuxifier load-session"
 
-fortune | cowsay | lolcat
+m () { ~/dotfiles/tmux-scripts/$1.sh }
 
+# rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+fortune | cowsay | lolcat
