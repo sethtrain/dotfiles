@@ -103,11 +103,8 @@ alias win="say \"All I Do is win win win no matter what, got money on mind i can
 alias git-clean="git remote prune origin && git gc && git clean -df && git stash clear"
 
 # Vim
-# alias vim="vim -c :NERDTree"
-
-# Emacs
-#alias e='emacsclient -t'
-#alias ec='emacsclient -c'
+alias vimnt="vim -c :NERDTree"
+alias vv="vim ~/.vim/vimrc"
 
 # Tmuxifier
 export PATH="$HOME/.tmuxifier/bin:$PATH"
