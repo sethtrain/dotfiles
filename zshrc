@@ -67,6 +67,7 @@ export GEM_HOME=~/.gems
 export PATH=~/.gems/bin:$PATH
 
 source ~/.passwords
+source ~/.envvars
 
 # Add NPM bins to path
 export PATH=/usr/local/share/npm/bin:$PATH
@@ -118,3 +119,6 @@ m () { ~/dotfiles/tmux-scripts/$1.sh }
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 fortune | cowsay | lolcat
+
+infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $TERM.ti
+tic $TERM.ti
