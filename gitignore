@@ -29,3 +29,4 @@ node_modules
 npm-debug.log
 .python-version
 *.ti
+rplugin
