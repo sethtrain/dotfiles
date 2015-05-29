@@ -105,7 +105,8 @@ alias git-clean="git remote prune origin && git gc && git clean -df && git stash
 
 # Vim
 alias vimnt="vim -c :NERDTree"
-alias vv="vim ~/.vim/vimrc"
+alias vv="cd ~/.vim && vim ~/.vim/vimrc"
+alias vp="cd ~/.vim && vim plugin"
 
 # Tmuxifier
 export PATH="$HOME/.tmuxifier/bin:$PATH"
@@ -117,8 +118,6 @@ m () { ~/dotfiles/tmux-scripts/$1.sh }
 
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-fortune | cowsay | lolcat
 
 infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $TERM.ti
 tic $TERM.ti
