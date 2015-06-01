@@ -106,7 +106,7 @@ alias git-clean="git remote prune origin && git gc && git clean -df && git stash
 # Vim
 alias vimnt="vim -c :NERDTree"
 alias vv="cd ~/.vim && vim ~/.vim/vimrc"
-alias vp="cd ~/.vim && vim plugin"
+alias vm="cd ~/dotfiles/tmux-scripts && vim monolith.sh"
 
 # Tmuxifier
 export PATH="$HOME/.tmuxifier/bin:$PATH"
