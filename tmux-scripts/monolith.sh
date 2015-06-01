@@ -3,33 +3,40 @@ PROJECT_DIR=~/projects/cicayda/monolith
 
 cd $PROJECT_DIR
 
-tmux -2 new-session -d -s $SESSION
-tmux send-keys "cd $PROJECT_DIR" C-m C-o C-l
-tmux rename-window "shell"
+if [[ `tmux attach -t $SESSION` ]]; then
+  echo "Attaching to session \"$SESSION\""
+else
+  echo "Creating session \"$SESSION\""
+  tmux -2 new-session -d -s $SESSION -n "shell"
 
-tmux new-window -t$SESSION:2 -c $PROJECT_DIR -n "mutt"
-tmux send-keys "mutt" C-m
+  tmux new-window -t$SESSION:2 -n "mutt"
+  tmux new-window -t$SESSION:3 -n "cljsbuild"
+  tmux new-window -t$SESSION:4 -n "logs"
+  tmux new-window -t$SESSION:5 -c vagrant/dev -n "vagrant"
+  tmux new-window -t$SESSION:6 -n "runners"
+  tmux new-window -t$SESSION:7 -n "vim"
 
-tmux new-window -t$SESSION:3 -c $PROJECT_DIR -n "cljsbuild"
-tmux send-keys "lein do cljsbuild clean, cljx, cljsbuild auto debug" C-m
+  tmux send-keys -t$SESSION:2 "mutt" C-m
 
-tmux new-window -t$SESSION:4 -c $PROJECT_DIR -n "logs"
-tmux send-keys "ssh dev \"tail -f /var/log/monolith/monolith.log\"" C-m
-tmux split-window -v
-tmux resize-pane -D 10
-tmux send-keys "ssh dev \"tail -f /var/log/monolith/appserver.upstart.log\"" C-m
+  tmux send-keys -t$SESSION:3 "lein do cljsbuild clean, cljx, cljsbuild auto debug" C-m
 
-tmux new-window -t$SESSION:5 -c $PROJECT_DIR/vagrant/dev -n "vagrant"
-tmux send-keys "vagrant up" C-m
+  tmux send-keys -t$SESSION:4 "ssh dev \"tail -f /var/log/monolith/monolith.log\"" C-m
+  tmux split-window -t$SESSION:4 -v
+  tmux send-keys -t$SESSION:4 "ssh dev \"tail -f /var/log/monolith/appserver.upstart.log\"" C-m
+  tmux select-layout -t$SESSION:4 even-vertical
 
-tmux new-window -t$SESSION:6 -c $PROJECT_DIR -n "runners"
-tmux send-keys "observr watchr/less.watch" C-m
-tmux split-window -v
-tmux send-keys "ssh -N prod-socks" C-m
-tmux split-window -v
+  tmux send-keys -t$SESSION:5 "vagrant up" C-m
 
-tmux new-window -t$SESSION:7 -c $PROJECT_DIR -n "vim"
-tmux send-keys "vim project.clj" C-m
+  tmux send-keys -t$SESSION:6 "observr watchr/less.watch" C-m
+  tmux split-window -t$SESSION:6 -v
+  tmux send-keys -t$SESSION:6 "ssh -N prod-socks" C-m
+  tmux split-window -t$SESSION:6 -v
+  tmux send-keys -t$SESSION:6 "ssh -N -L 9009:localhost:9009 dev" C-m
+  tmux split-window -t$SESSION:6 -v
+  tmux select-layout -t$SESSION:6 even-vertical
 
-tmux select-window -t$SESSION:1
-tmux -2 attach-session -t $SESSION
+  tmux send-keys -t$SESSION:7 "vim project.clj" C-m
+
+  tmux select-window -t$SESSION:1
+  tmux attach-session -t $SESSION
+fi
