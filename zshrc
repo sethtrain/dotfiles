@@ -28,7 +28,7 @@ vim_cmd_mode="%{$fg[green]%}-- NORMAL --%{$reset_color%}"
 vim_mode=$vim_ins_mode
 
 function zle-line-init zle-keymap-select {
-    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
+    RPS1="${${KEYMAP/vicmd/${vim_cmd_mode}}/(main|viins)/${vim_ins_mode}}"
     RPS2=$RPS1
     zle reset-prompt
 }
