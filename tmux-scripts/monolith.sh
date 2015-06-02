@@ -1,5 +1,5 @@
 SESSION=monolith
-PROJECT_DIR=~/projects/cicayda/monolith
+export PROJECT_DIR=~/projects/cicayda/monolith
 
 cd $PROJECT_DIR
 

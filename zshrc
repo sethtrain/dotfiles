@@ -118,6 +118,3 @@ m () { ~/dotfiles/tmux-scripts/$1.sh }
 
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $TERM.ti
-tic $TERM.ti
