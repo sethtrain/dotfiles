@@ -104,6 +104,8 @@ alias win="say \"All I Do is win win win no matter what, got money on mind i can
 alias git-clean="git remote prune origin && git gc && git clean -df && git stash clear"
 
 # Vim
+vs () { vim -S ~/.vim-sessions/$1.vim }
+
 alias vimnt="vim -c :NERDTree"
 alias vv="cd ~/.vim && vim ~/.vim/vimrc"
 alias vm="cd ~/dotfiles/tmux-scripts && vim monolith.sh"
