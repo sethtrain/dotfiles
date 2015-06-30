@@ -110,12 +110,6 @@ alias vimnt="vim -c :NERDTree"
 alias vv="cd ~/.vim && vim ~/.vim/vimrc"
 alias vm="cd ~/dotfiles/tmux-scripts && vim monolith.sh"
 
-# Tmuxifier
-export PATH="$HOME/.tmuxifier/bin:$PATH"
-export TMUXIFIER_LAYOUT_PATH="$HOME/dotfiles/tmuxifier-layouts"
-eval "$(tmuxifier init -)"
-alias mux="tmuxifier load-session"
-
 m () { ~/dotfiles/tmux-scripts/$1.sh }
 
 # rbenv
