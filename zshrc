@@ -111,6 +111,3 @@ alias vv="cd ~/.vim && vim ~/.vim/vimrc"
 alias vm="cd ~/dotfiles/tmux-scripts && vim monolith.sh"
 
 m () { ~/dotfiles/tmux-scripts/$1.sh }
-
-# rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
