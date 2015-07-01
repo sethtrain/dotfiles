@@ -111,3 +111,10 @@ alias vv="cd ~/.vim && vim ~/.vim/vimrc"
 alias vm="cd ~/dotfiles/tmux-scripts && vim monolith.sh"
 
 m () { ~/dotfiles/tmux-scripts/$1.sh }
+
+# NationBuilder
+mount-up () {
+  cd ~/projects/nb/regulator
+  vagrant up
+  vagrant ssh
+}
