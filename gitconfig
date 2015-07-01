@@ -35,8 +35,8 @@
 [mergetool "threesome"]
     cmd = "vim -f $BASE $LOCAL $REMOTE $MERGED -c 'ThreesomeInit'"
     trustExitCode = true
-[push]
-	default = simple
+#[push]
+#	default = simple
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
