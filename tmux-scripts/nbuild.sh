@@ -1,5 +1,5 @@
 SESSION=nbuild
-PROJECT_DIR=~/projects/nb/nbuild
+PROJECT_DIR=/nbuild
 
 cd $PROJECT_DIR
 
