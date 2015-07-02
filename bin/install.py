@@ -24,6 +24,9 @@ for f in files:
     dest = join(home, ".%s" % f)
 
     if not islink(dest):
+        # handle already there
+        if os.path.isfile(dest):
+            os.rename(dest, "%s.orig" % dest)
         print "Symlinking %s to %s" % (src, dest)
         os.symlink(src, dest)
     else:
