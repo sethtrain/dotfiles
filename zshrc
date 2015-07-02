@@ -1,4 +1,8 @@
-source ~/dotfiles/pure/prompt.zsh
+fpath=( "$HOME/.zsh/zfunctions" $fpath )
+
+autoload -U promptinit && promptinit
+prompt pure
+
 source ~/.zsh/aliases
 
 # Completions
