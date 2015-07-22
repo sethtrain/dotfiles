@@ -80,24 +80,11 @@ export PATH=/usr/local/share/npm/bin:$PATH
 alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
 alias lein="nocorrect lein"
 
-unpack-mc() {
-    cd ~
-    mkdir mctmp
-    cd mctmp
-    jar xf ~/Library/Application\ Support/minecraft/bin/minecraft.jar
-    open ~/mctmp
-}
-
-pack-mc() {
-    cd ~/mctmp
-    rm META-INF/MOJANG_C.*
-    jar uf ~/Library/Application\ Support/minecraft/bin/minecraft.jar ./
-    cd ..
-    rm -rf mctmp
-}
-
 # Go lang
 export PATH=/usr/local/go/bin:$PATH
+
+# Postgres.app
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
 
 alias win="say \"All I Do is win win win no matter what, got money on mind i can never get enough, and everytime I step up in the building, everybody hands go up, and they stay there, and they say yeah, and they stay there, Up down, up down\""
 
