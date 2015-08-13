@@ -17,7 +17,7 @@ else
   tmux send-keys "rails c" C-m
 
   tmux new-window -t$SESSION:4 -c $PROJECT_DIR -n "server"
-  tmux send-keys "rails s" C-m
+  tmux send-keys "foreman start" C-m
 
   tmux select-window -t$SESSION:1
   tmux -2 attach-session -t $SESSION
