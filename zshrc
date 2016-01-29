@@ -24,27 +24,6 @@ then
   fi
 fi
 
-# Vim mode and prompt
-bindkey -v
-
-vim_ins_mode="%{$fg[cyan]%}-- INSERT --%{$reset_color%}"
-vim_cmd_mode="%{$fg[green]%}-- NORMAL --%{$reset_color%}"
-vim_mode=$vim_ins_mode
-
-function zle-line-init zle-keymap-select {
-    RPS1="${${KEYMAP/vicmd/${vim_cmd_mode}}/(main|viins)/${vim_ins_mode}}"
-    RPS2=$RPS1
-    zle reset-prompt
-}
-
-zle -N zle-line-init
-zle -N zle-keymap-select
-
-# bindkey -M viins 'jj' vi-cmd-mode
-bindkey -M vicmd '?' history-incremental-search-backward
-
-RPROMPT=${vim_mode}
-
 # Tab completions
 fpath=(~/.zsh/completion $fpath)
 
@@ -76,15 +55,15 @@ source ~/.envvars
 # Add NPM bins to path
 export PATH=/usr/local/share/npm/bin:$PATH
 
+# Add local dir node_modules/.bin to path
+export PATH=./node_modules/.bin:$PATH
+
 # alias to nw
 alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
 alias lein="nocorrect lein"
 
 # Go lang
 export PATH=/usr/local/go/bin:$PATH
-
-# Postgres.app
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
 
 alias win="say \"All I Do is win win win no matter what, got money on mind i can never get enough, and everytime I step up in the building, everybody hands go up, and they stay there, and they say yeah, and they stay there, Up down, up down\""
 
@@ -99,9 +78,4 @@ alias vm="cd ~/dotfiles/tmux-scripts && vim monolith.sh"
 
 m () { ~/dotfiles/tmux-scripts/$1.sh }
 
-# NationBuilder
-mount-up () {
-  cd ~/projects/nb/regulator
-  vagrant up
-  vagrant ssh
-}
+source ~/.emma
