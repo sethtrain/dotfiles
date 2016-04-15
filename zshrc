@@ -38,6 +38,9 @@ SAVEHIST=10000
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
 export EDITOR=vim
 
+# Still keep Emacs bindings for general line navigation
+bindkey -e
+
 # 10ms for key sequences
 KEYTIMEOUT=1
 
@@ -69,12 +72,10 @@ alias win="say \"All I Do is win win win no matter what, got money on mind i can
 
 alias git-clean="git remote prune origin && git gc && git clean -df && git stash clear"
 
-# Vim
+# Vim/Neovim
 vs () { vim -S ~/.vim-sessions/$1.vim }
 
-alias vimnt="vim -c :NERDTree"
-alias vv="cd ~/.vim && vim ~/.vim/vimrc"
-alias vm="cd ~/dotfiles/tmux-scripts && vim monolith.sh"
+alias nv="cd ~/.config/nvim && nvim ~/.config/nvim/init.vim"
 
 m () { ~/dotfiles/tmux-scripts/$1.sh }
 
