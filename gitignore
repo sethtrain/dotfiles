@@ -30,3 +30,4 @@ npm-debug.log
 .python-version
 *.ti
 rplugin
+.projections.json
