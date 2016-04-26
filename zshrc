@@ -57,6 +57,8 @@ source ~/.envvars
 
 # Add NPM bins to path
 export PATH=/usr/local/share/npm/bin:$PATH
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
 
 # Add local dir node_modules/.bin to path
 export PATH=./node_modules/.bin:$PATH
