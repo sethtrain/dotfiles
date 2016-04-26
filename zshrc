@@ -81,4 +81,10 @@ alias nv="cd ~/.config/nvim && nvim ~/.config/nvim/init.vim"
 
 m () { ~/dotfiles/tmux-scripts/$1.sh }
 
+_m_comp() {
+    reply=($(ls -1 ~/dotfiles/tmux-scripts | sed -e 's/\..*$//'));
+}
+
+compctl -K _m_comp m
+
 source ~/.emma
