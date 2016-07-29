@@ -31,3 +31,4 @@ npm-debug.log
 *.ti
 rplugin
 .projections.json
+.tern-project
