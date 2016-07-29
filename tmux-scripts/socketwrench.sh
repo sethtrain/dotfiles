@@ -12,20 +12,15 @@ else
   tmux send-keys "workon $SESSION" C-m C-l
   tmux rename-window "shell"
 
-  tmux new-window -t$SESSION:2 -c $PROJECT_DIR -n "nvim"
+  tmux new-window -t$SESSION:2 -c $PROJECT_DIR -n "vim"
   tmux send-keys "workon $SESSION" C-m C-l
-  tmux send-keys "nvim" C-m C-l
+  tmux send-keys "vim" C-m C-l
 
-  tmux new-window -t$SESSION:3 -c $PROJECT_DIR/client -n "webpack"
-  tmux send-keys C-l "npm run webpack" C-m
-
-  tmux new-window -t$SESSION:4 -c $PROJECT_DIR/$SESSION -n "django server"
+  tmux new-window -t$SESSION:3 -c $PROJECT_DIR/$SESSION -n "servers"
   tmux send-keys "workon $SESSION" C-m C-l
   tmux send-keys C-l "./manage.py runserver 0.0.0.0:8888" C-m
-
-  tmux new-window -t$SESSION:5 -c $PROJECT_DIR -n "sass"
-  tmux send-keys "workon $SESSION" C-m C-l
-  tmux send-keys C-l "" C-m
+  tmux split-window -v
+  tmux send-keys C-l "cd client && npm run webpack" C-m
 
   tmux select-window -t$SESSION:1
   tmux -2 attach-session -t $SESSION
