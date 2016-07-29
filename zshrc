@@ -48,10 +48,6 @@ KEYTIMEOUT=1
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 export SHELL=/bin/zsh
 
-# Ruby/Gems
-export GEM_HOME=~/.gems
-export PATH=~/.gems/bin:$PATH
-
 source ~/.passwords
 source ~/.envvars
 
@@ -88,3 +84,7 @@ _m_comp() {
 compctl -K _m_comp m
 
 source ~/.emma
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+alias emacs="/usr/local/bin/emacs"
