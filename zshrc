@@ -63,9 +63,6 @@ export PATH=./node_modules/.bin:$PATH
 alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
 alias lein="nocorrect lein"
 
-# Go lang
-export PATH=/usr/local/go/bin:$PATH
-
 alias win="say \"All I Do is win win win no matter what, got money on mind i can never get enough, and everytime I step up in the building, everybody hands go up, and they stay there, and they say yeah, and they stay there, Up down, up down\""
 
 alias git-clean="git remote prune origin && git gc && git clean -df && git stash clear"
@@ -73,18 +70,13 @@ alias git-clean="git remote prune origin && git gc && git clean -df && git stash
 # Vim/Neovim
 vs () { vim -S ~/.vim-sessions/$1.vim }
 
-alias nv="cd ~/.config/nvim && nvim ~/.config/nvim/init.vim"
-
+# Tmux scripts and completion
 m () { ~/dotfiles/tmux-scripts/$1.sh }
-
 _m_comp() {
     reply=($(ls -1 ~/dotfiles/tmux-scripts | sed -e 's/\..*$//'));
 }
-
 compctl -K _m_comp m
 
+# Emma and LocalEmma settings
 source ~/.emma
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-alias emacs="/usr/local/bin/emacs"
