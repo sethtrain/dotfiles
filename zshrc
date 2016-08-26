@@ -1,9 +1,15 @@
+# Customize to your needs...
+export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
+export EDITOR=vim
+
 fpath=( "$HOME/.zsh/zfunctions" $fpath )
 
 autoload -U promptinit && promptinit
 prompt pure
 
 source ~/.zsh/aliases
+
+source ~/.emma
 
 # Completions
 autoload -U compinit
@@ -34,9 +40,6 @@ fi
 HISTSIZE=10000
 SAVEHIST=10000
 
-# Customize to your needs...
-export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
-export EDITOR=vim
 
 # Still keep Emacs bindings for general line navigation
 bindkey -e
@@ -54,7 +57,7 @@ source ~/.envvars
 # Add NPM bins to path
 export PATH=/usr/local/share/npm/bin:$PATH
 export NVM_DIR="$HOME/.nvm"
-. "$(brew --prefix nvm)/nvm.sh"
+source "$(brew --prefix nvm)/nvm.sh"
 
 # Add local dir node_modules/.bin to path
 export PATH=./node_modules/.bin:$PATH
@@ -76,7 +79,3 @@ _m_comp() {
     reply=($(ls -1 ~/dotfiles/tmux-scripts | sed -e 's/\..*$//'));
 }
 compctl -K _m_comp m
-
-# Emma and LocalEmma settings
-source ~/.emma
-
