@@ -12,7 +12,7 @@ else
   tmux rename-window "shell"
 
   tmux new-window -t$SESSION:2 -c $PROJECT_DIR -n "LocalEmma"
-  tmux send-keys "cd ../LocalEmma && vagrant up" C-m C-l
+  tmux send-keys "cd ../LocalEmma && lemma up" C-m C-l
 
   tmux new-window -t$SESSION:3 -c $PROJECT_DIR -n "emma logs"
   tmux send-keys C-l "ssh -o ConnectTimeout=240 emma27 \"tail -f /var/log/apache2/apache2-errors.log\"" C-m
