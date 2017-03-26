@@ -1,5 +1,5 @@
 # Customize to your needs...
-export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=$PATH:~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
 export EDITOR=vim
 
 fpath=( "$HOME/.zsh/zfunctions" $fpath )
@@ -79,3 +79,6 @@ _m_comp() {
     reply=($(ls -1 ~/dotfiles/tmux-scripts | sed -e 's/\..*$//'));
 }
 compctl -K _m_comp m
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
