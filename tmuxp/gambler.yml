@@ -1,0 +1,25 @@
+session_name: gambler
+start_directory: ~/projects/buntin/gambler
+environment:
+  GAMBLER_DATABASE_USER: gambler
+  GAMBLER_DATABASE_PASSWORD: password
+windows:
+  - window_name: shell
+    panes:
+      - blank
+  - window_name: vim
+    panes:
+      - shell_command: vim
+  - window_name: zookeeper
+    start_directory: ~/projects/sources/confluent-3.0.0
+    panes:
+      - ./bin/zookeeper-server-start ./etc/kafka/zookeeper.properties
+  - window_name: control-center
+    start_directory: ~/projects/sources/confluent-3.0.0
+    panes:
+      - ./bin/control-center-start ./etc/confluent-control-center/control-center.properties
+  - window_name: kafka
+    start_directory: ~/projects/sources/confluent-3.0.0
+    panes:
+      - ./bin/kafka-server-start ./etc/kafka/server.properties
+
