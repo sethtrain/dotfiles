@@ -1,5 +1,5 @@
 # Customize to your needs...
-export PATH=$PATH:~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=/usr/local/opt/python/libexec/bin:$PATH:~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
 export EDITOR=vim
 
 fpath=( "$HOME/.zsh/zfunctions" $fpath )
@@ -54,11 +54,6 @@ export SHELL=/bin/zsh
 source ~/.passwords
 source ~/.envvars
 
-# Add NPM bins to path
-export PATH=/usr/local/share/npm/bin:$PATH
-export NVM_DIR="$HOME/.nvm"
-source "$(brew --prefix nvm)/nvm.sh"
-
 # Add local dir node_modules/.bin to path
 export PATH=./node_modules/.bin:$PATH
 
@@ -74,11 +69,13 @@ alias git-clean="git remote prune origin && git gc && git clean -df && git stash
 vs () { vim -S ~/.vim-sessions/$1.vim }
 
 # Tmux scripts and completion
-m () { ~/dotfiles/tmux-scripts/$1.sh }
+m () { tmuxp load ~/dotfiles/tmuxp/$1.yml }
 _m_comp() {
-    reply=($(ls -1 ~/dotfiles/tmux-scripts | sed -e 's/\..*$//'));
+    reply=($(ls -1 ~/dotfiles/tmuxp/*.yml | xargs basename -s .yml));
 }
 compctl -K _m_comp m
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# Virtualenv
+source /usr/local/bin/virtualenvwrapper.sh
+source $HOME/.zsh/zfunctions/virtualenv-auto-activate.sh
+

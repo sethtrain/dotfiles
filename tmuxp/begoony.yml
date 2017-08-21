@@ -1,0 +1,16 @@
+start_directory: "projects/begoony"
+shell_command_before: "workon begoony"
+session_name: "Begoony"
+windows:
+- window_name: vim
+  panes:
+  - shell_command:
+    - vim
+- window_name: docker
+  panes:
+  - shell_command:
+    - docker-compose up
+- window_name: server
+  panes:
+  - shell_command:
+    - ./manage.py runserver
