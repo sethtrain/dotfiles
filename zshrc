@@ -1,5 +1,5 @@
 # Customize to your needs...
-export PATH=$PATH:~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=/usr/local/opt/python/libexec/bin:$PATH:~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
 export EDITOR=vim
 
 fpath=( "$HOME/.zsh/zfunctions" $fpath )
@@ -54,11 +54,6 @@ export SHELL=/bin/zsh
 source ~/.passwords
 source ~/.envvars
 
-# Add NPM bins to path
-export PATH=/usr/local/share/npm/bin:$PATH
-export NVM_DIR="$HOME/.nvm"
-source "$(brew --prefix nvm)/nvm.sh"
-
 # Add local dir node_modules/.bin to path
 export PATH=./node_modules/.bin:$PATH
 
@@ -80,5 +75,7 @@ _m_comp() {
 }
 compctl -K _m_comp m
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# Virtualenv
+source /usr/local/bin/virtualenvwrapper.sh
+source $HOME/.zsh/zfunctions/virtualenv-auto-activate.sh
+
