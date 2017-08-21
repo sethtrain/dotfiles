@@ -69,9 +69,9 @@ alias git-clean="git remote prune origin && git gc && git clean -df && git stash
 vs () { vim -S ~/.vim-sessions/$1.vim }
 
 # Tmux scripts and completion
-m () { ~/dotfiles/tmux-scripts/$1.sh }
+m () { tmuxp load ~/dotfiles/tmuxp/$1.yml }
 _m_comp() {
-    reply=($(ls -1 ~/dotfiles/tmux-scripts | sed -e 's/\..*$//'));
+    reply=($(ls -1 ~/dotfiles/tmuxp/*.yml | xargs basename -s .yml));
 }
 compctl -K _m_comp m
 
