@@ -1,4 +1,4 @@
-start_directory: "projects/begoony"
+start_directory: "~/projects/begoony"
 shell_command_before: "workon begoony"
 session_name: "Begoony"
 windows:
