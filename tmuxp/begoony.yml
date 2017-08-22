@@ -6,6 +6,12 @@ windows:
   panes:
   - shell_command:
     - vim
+- window_name: client
+  start_directory: "~/projects/begoony-python-client"
+  shell_command_before: "workon begoony-python-client"
+  panes:
+  - shell_command:
+    - vim
 - window_name: docker
   panes:
   - shell_command:
