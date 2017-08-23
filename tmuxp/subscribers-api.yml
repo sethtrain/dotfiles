@@ -1,5 +1,7 @@
 session_name: subscribers
 start_directory: ~/projects/emma/subscribers-api
+shell_command_before:
+  - workon subscribers-api
 environment:
   POSTGRES_DB: subscribers
   POSTGRES_USER: subscribers
@@ -8,23 +10,15 @@ environment:
   SQITCH_PASSWORD: password
 windows:
   - window_name: shell
-    shell_command_before:
-      - workon subscribers-api
     panes:
       - blank
   - window_name: vim
-    shell_command_before:
-      - workon subscribers-api
     panes:
       - shell_command: vim
   - window_name: docker
-    shell_command_before:
-      - workon subscribers-api
     panes:
       - docker-compose up
   - window_name: server
-    shell_command_before:
-      - workon subscribers-api
     panes:
       - python runserver.py
   - window_name: psql

@@ -1,8 +1,14 @@
-start_directory: "projects/begoony"
+start_directory: "~/projects/begoony"
 shell_command_before: "workon begoony"
 session_name: "Begoony"
 windows:
 - window_name: vim
+  panes:
+  - shell_command:
+    - vim
+- window_name: client
+  start_directory: "~/projects/begoony-python-client"
+  shell_command_before: "workon begoony-python-client"
   panes:
   - shell_command:
     - vim
