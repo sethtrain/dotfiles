@@ -27,5 +27,7 @@ windows:
       - workon subscribers-api
     panes:
       - python runserver.py
-
+  - window_name: psql
+    panes:
+      - psql -h localhost -U $POSTGRES_USER -d $POSTGRES_DB
 
