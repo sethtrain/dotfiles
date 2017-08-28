@@ -17,7 +17,7 @@ try:
 except IndexError:
     excludes = excludes + linux_only_excludes
 
-files = [ f for f in listdir(directory) if f not in excludes]
+files = [f for f in listdir(directory) if f not in excludes]
 
 for f in files:
     src = join(directory, f)
