@@ -21,6 +21,10 @@ windows:
   - window_name: server
     panes:
       - python runserver.py
+  - window_name: sqitch
+    start_directory: ~/projects/emma/subscribers-api/sqitch
+    panes:
+      - blank
   - window_name: psql
     panes:
       - psql -h localhost -U $POSTGRES_USER -d $POSTGRES_DB
