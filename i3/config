@@ -21,7 +21,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec dmenu_run
 
 # lock the screen
-bindsym $mod+z exec i3lock -i ~/dotfiles/backgrounds/switzerland_alps_mountains_night.png -c 0002AA
+bindsym $mod+z exec i3lock -i ~/dotfiles/backgrounds/switzerland_alps_mountains_night.png
 
 # change focus
 bindsym $mod+h focus left
