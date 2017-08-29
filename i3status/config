@@ -8,17 +8,17 @@ order += "volume master"
 order += "tztime local"
 
 battery 0 {
-  format = "  %percentage"
+  format = "%percentage"
 }
 
 volume master {
-  format = "🔊 %volume"
-  format_muted = "🔇 %volume"
+  format = "%volume"
+  format_muted = "%volume"
   device = "default"
   mixer = "Master"
   mixer_idx = 0
 }
 
 tztime local {
-  format = "  %Y-%m-%d %H:%M"
+  format = "%Y-%m-%d %h:%M"
 }
