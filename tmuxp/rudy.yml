@@ -1,0 +1,12 @@
+session_name: rudy
+start_directory: ~/projects/go/src/github.com/sethtrain/rudy
+windows:
+  - window_name: shell
+    panes:
+      - blank
+  - window_name: vim
+    panes:
+      - shell_command: vim
+  - window_name: docker
+    panes:
+      - shell_command: docker-compose up

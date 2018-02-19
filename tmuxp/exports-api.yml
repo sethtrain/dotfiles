@@ -1,0 +1,31 @@
+session_name: exports
+start_directory: ~/projects/emma/exports-api
+shell_command_before:
+  - workon exports-api
+environment:
+  POSTGRES_DB: exports
+  POSTGRES_USER: exports
+  POSTGRES_PASSWORD: password
+  PGDATA: /var/lib/postgresql/data/pgdata
+  SQITCH_PASSWORD: password
+windows:
+  - window_name: shell
+    panes:
+      - blank
+  - window_name: vim
+    panes:
+      - shell_command: vim
+  - window_name: docker
+    panes:
+      - docker-compose up
+  - window_name: server
+    panes:
+      - python runserver.py
+  - window_name: sqitch
+    start_directory: ~/projects/emma/exports-api/sqitch
+    panes:
+      - blank
+  - window_name: psql
+    panes:
+      - psql -h localhost -U $POSTGRES_USER -d $POSTGRES_DB
+

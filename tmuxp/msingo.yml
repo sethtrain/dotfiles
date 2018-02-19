@@ -1,0 +1,12 @@
+session_name: msingo
+start_directory: ~/projects/go/src/github.com/emmadev/msingo
+windows:
+  - window_name: shell
+    panes:
+      - blank
+  - window_name: nvim
+    panes:
+      - shell_command: nvim
+  - window_name: docker
+    panes:
+      - shell_command: docker-compose up
