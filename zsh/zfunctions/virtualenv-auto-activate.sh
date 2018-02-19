@@ -33,6 +33,12 @@ else
 fi
 
 _virtualenv_auto_activate() {
+    if [ -d "venv3" ]; then
+        source venv3/bin/activate
+    fi
+    if [ -d "venv" ]; then
+        source venv/bin/activate
+    fi
     if [ -e ".venv" ]; then
         # Check for symlink pointing to virtualenv
         if [ -L ".venv" ]; then
