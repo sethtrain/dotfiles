@@ -6,7 +6,7 @@ export PATH=/usr/local/opt/python/libexec/bin:$PATH:~/bin:/usr/local/bin:/usr/lo
 export PATH=$GOPATH/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH=./node_modules/.bin:$PATH
-export EDITOR=vim
+export EDITOR=nvim
 export SHELL=/bin/zsh
 
 fpath=( "$HOME/.zsh/zfunctions" $fpath )
