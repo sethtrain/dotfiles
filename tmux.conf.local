@@ -3,7 +3,6 @@
 #         without any warranty.
 #         Copyright 2012— Gregory Pakosz (@gpakosz).
 
-
 # -- navigation ----------------------------------------------------------------
 
 # if you're running tmux within iTerm2
@@ -64,7 +63,8 @@ tmux_conf_theme_pane_border_style=thin
 
 # pane borders colours:
 tmux_conf_theme_pane_border='#444444'                   # gray
-tmux_conf_theme_pane_active_border='#00afff'            # light blue
+#tmux_conf_theme_pane_active_border='#00afff'            # light blue
+tmux_conf_theme_pane_active_border='#9370DB'            # light blue
 
 # pane indicator colours
 tmux_conf_theme_pane_indicator='#00afff'                # light blue
@@ -74,7 +74,7 @@ tmux_conf_theme_pane_active_indicator='#00afff'         # light blue
 #tmux_conf_theme_message_fg='#00000'                    # black
 #tmux_conf_theme_message_bg='#ffff00'                   # yellow
 tmux_conf_theme_message_fg='#2D283E'
-tmux_conf_theme_message_bg='#D1D7E0'
+tmux_conf_theme_message_bg='#808080'
 tmux_conf_theme_message_attr='bold'
 
 # status line command style (<prefix> : Escape)
@@ -110,7 +110,7 @@ tmux_conf_theme_window_status_format='#I #W'
 #tmux_conf_theme_window_status_current_fg='#000000'      # black
 #tmux_conf_theme_window_status_current_bg='#00afff'      # light blue
 tmux_conf_theme_window_status_current_fg='#2D283E'
-tmux_conf_theme_window_status_current_bg='#D1D7E0'
+tmux_conf_theme_window_status_current_bg='#808080'
 tmux_conf_theme_window_status_current_attr='bold'
 tmux_conf_theme_window_status_current_format='#I #W'
 #tmux_conf_theme_window_status_current_format='#{circled_window_index} #W'
@@ -171,13 +171,13 @@ tmux_conf_theme_status_right='#{prefix}#{pairing} #{?battery_status, #{battery_s
 # status left style
 #tmux_conf_theme_status_left_fg='#000000,#e4e4e4,#e4e4e4'  # black, white , white
 #tmux_conf_theme_status_left_bg='#ffff00,#ff00af,#00afff'  # yellow, pink, white blue
-tmux_conf_theme_status_left_fg='#310138,#e4e4e4,#e4e4e4'  # white, white , white
-tmux_conf_theme_status_left_bg='#9370DB,#310138,#00afff'  # medium purple, pink, white blue
+tmux_conf_theme_status_left_fg='#f4e6ff,#e4e4e4,#e4e4e4'  # white, white , white
+tmux_conf_theme_status_left_bg='#4b0082,#310138,#00afff'  # indigo, pink, white blue
 tmux_conf_theme_status_left_attr='bold,none,none'
 
 # status right style
-tmux_conf_theme_status_right_fg='#8a8a8a,#310138,#000000' # light gray, white, black
-tmux_conf_theme_status_right_bg='#080808,#9370DB,#e4e4e4' # dark gray, red, white
+tmux_conf_theme_status_right_fg='#8a8a8a,#f4e6ff,#000000' # light gray, white, black
+tmux_conf_theme_status_right_bg='#080808,#4b0082,#e4e4e4' # dark gray, indigo, white
 tmux_conf_theme_status_right_attr='none,bold,bold'
 
 # pairing indicator
