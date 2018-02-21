@@ -171,13 +171,13 @@ tmux_conf_theme_status_right='#{prefix}#{pairing} #{?battery_status, #{battery_s
 # status left style
 #tmux_conf_theme_status_left_fg='#000000,#e4e4e4,#e4e4e4'  # black, white , white
 #tmux_conf_theme_status_left_bg='#ffff00,#ff00af,#00afff'  # yellow, pink, white blue
-tmux_conf_theme_status_left_fg='#f4e6ff,#e4e4e4,#e4e4e4'  # white, white , white
-tmux_conf_theme_status_left_bg='#4b0082,#310138,#00afff'  # indigo, pink, white blue
+tmux_conf_theme_status_left_fg='#ffe6ff,#e4e4e4,#e4e4e4'  # white, white , white
+tmux_conf_theme_status_left_bg='#660066,#310138,#00afff'  # indigo, pink, white blue
 tmux_conf_theme_status_left_attr='bold,none,none'
 
 # status right style
-tmux_conf_theme_status_right_fg='#8a8a8a,#f4e6ff,#000000' # light gray, white, black
-tmux_conf_theme_status_right_bg='#080808,#4b0082,#e4e4e4' # dark gray, indigo, white
+tmux_conf_theme_status_right_fg='#8a8a8a,#ffe6ff,#000000' # light gray, white, black
+tmux_conf_theme_status_right_bg='#080808,#660066,#e4e4e4' # dark gray, indigo, white
 tmux_conf_theme_status_right_attr='none,bold,bold'
 
 # pairing indicator
