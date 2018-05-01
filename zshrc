@@ -6,6 +6,7 @@ export PATH=/usr/local/opt/python/libexec/bin:$PATH:~/bin:/usr/local/bin:/usr/lo
 export PATH=$GOPATH/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH=./node_modules/.bin:$PATH
+export PATH=/usr/local/opt/python@2/bin:$PATH
 export EDITOR=nvim
 export SHELL=/bin/zsh
 
@@ -54,6 +55,12 @@ KEYTIMEOUT=1
 source ~/.passwords
 source ~/.envvars
 source ~/.emma
+
+################################################################
+# Ruby
+################################################################
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/share/gem_home/gem_home.sh
 
 ################################################################
 # Leiningen
