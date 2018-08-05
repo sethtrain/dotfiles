@@ -96,3 +96,7 @@ source $HOME/.zsh/zfunctions/virtualenv-auto-activate.sh
 ################################################################
 alias win="say \"All I Do is win win win no matter what, got money on mind i can never get enough, and everytime I step up in the building, everybody hands go up, and they stay there, and they say yeah, and they stay there, Up down, up down\""
 
+# RVM
+source /Users/sbuntin/.rvm/scripts/rvm
+
+export PATH="/usr/local/opt/node@6/bin:$PATH"
