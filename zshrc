@@ -72,24 +72,16 @@ alias lein="nocorrect lein"
 ################################################################
 alias git-clean="git remote prune origin && git gc && git clean -df && git stash clear"
 
-################################################################
-# Tmuxp load files completion
-################################################################
-m () { tmuxp load ~/dotfiles/tmuxp/$1.yml }
-_m_comp() {
-    reply=($(ls -1 ~/dotfiles/tmuxp/*.yml | xargs basename -s .yml));
-}
-compctl -K _m_comp m
-
-################################################################
-# Vim
-################################################################
-vs () { vim -S ~/.vim-sessions/$1.vim }
 
 ################################################################
 # Virtualenv
 ################################################################
 source $HOME/.zsh/zfunctions/virtualenv-auto-activate.sh
+
+################################################################
+# Tmuxinator
+################################################################
+source $HOME/.zsh/completion/tmuxinator.zsh
 
 ################################################################
 # Winning
@@ -99,4 +91,5 @@ alias win="say \"All I Do is win win win no matter what, got money on mind i can
 # RVM
 source /Users/sbuntin/.rvm/scripts/rvm
 
+# Node
 export PATH="/usr/local/opt/node@6/bin:$PATH"
