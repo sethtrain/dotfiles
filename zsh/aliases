@@ -27,4 +27,4 @@ alias afind='ack-grep -il'
 alias pair-emacs="open -a /Applications/Emacs.app project.clj && emacsclient -nw project.clj"
 alias serve="python2 -m SimpleHTTPServer 4000"
 
-alias vim="nvim"
+#alias vim="nvim"
