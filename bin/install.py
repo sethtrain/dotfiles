@@ -27,11 +27,11 @@ for f in files:
         # handle already there
         if os.path.isfile(dest):
             os.rename(dest, "%s.orig" % dest)
-        print "Symlinking %s to %s" % (src, dest)
+        print("Symlinking %s to %s" % (src, dest))
         os.symlink(src, dest)
     else:
-        print "Unlinking %s to %s" % (src, dest)
+        print("Unlinking %s to %s" % (src, dest))
         os.unlink(dest)
-        print "Symlinking %s to %s" % (src, dest)
+        print("Symlinking %s to %s" % (src, dest))
         os.symlink(src, dest)
 
