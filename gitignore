@@ -1,5 +1,6 @@
 datadir
 venv
+.vscode
 notes.org
 .netrwhist
 *.pyc
@@ -9,7 +10,6 @@ sandbox
 *.ropeproject
 *.egg-info
 .DS_Store
-dist
 *.swp
 doc/tags
 .venv
@@ -34,3 +34,8 @@ npm-debug.log
 rplugin
 .projections.json
 .tern-project
+.todos.json
+package-lock.json
+.tmuxp.yml
+.generators
+.rakeTasks
