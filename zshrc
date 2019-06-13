@@ -1,10 +1,7 @@
 ################################################################
 # Environment variables
 ################################################################
-export GOPATH=~/projects/go
 export PATH=/usr/local/opt/python/libexec/bin:$PATH:~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
-export PATH=$GOPATH/bin:$PATH
-export PATH=$HOME/.cargo/bin:$PATH
 export PATH=./node_modules/.bin:$PATH
 export PATH=/usr/local/opt/python@2/bin:$PATH
 export EDITOR=nvim
@@ -57,21 +54,9 @@ source ~/.envvars
 source ~/.emma
 
 ################################################################
-# Ruby
-################################################################
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/share/gem_home/gem_home.sh
-
-################################################################
-# Leiningen
-################################################################
-alias lein="nocorrect lein"
-
-################################################################
 # Git
 ################################################################
 alias git-clean="git remote prune origin && git gc && git clean -df && git stash clear"
-
 
 ################################################################
 # Virtualenv
@@ -88,4 +73,14 @@ source $HOME/.zsh/completion/tmuxinator.zsh
 ################################################################
 alias win="say \"All I Do is win win win no matter what, got money on mind i can never get enough, and everytime I step up in the building, everybody hands go up, and they stay there, and they say yeah, and they stay there, Up down, up down\""
 alias easy="say -v\"Good News\" \"That was easy\""
+
+export LDFLAGS="-L/usr/local/opt/zlib/lib"
+export CPPFLAGS="-I/usr/local/opt/zlib/include"
+
+################################################################
+# Pyenv
+################################################################
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
