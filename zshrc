@@ -80,7 +80,5 @@ export CPPFLAGS="-I/usr/local/opt/zlib/include"
 ################################################################
 # Pyenv
 ################################################################
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
