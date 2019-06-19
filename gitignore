@@ -36,5 +36,6 @@ rplugin
 .tern-project
 .todos.json
 package-lock.json
+.tmuxp.yml
 .generators
 .rakeTasks

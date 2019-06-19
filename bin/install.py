@@ -8,7 +8,7 @@ from os.path import islink, join, expanduser
 home = expanduser("~/")
 directory = expanduser("~/dotfiles")
 
-excludes = ["README.md", ".gitmodules", ".git", "bin"]
+excludes = ["pure", "README.md", ".gitmodules", ".git", "bin"]
 linux_only_excludes = []
 
 try:
