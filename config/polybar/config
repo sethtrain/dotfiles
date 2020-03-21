@@ -1,0 +1,65 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
+
+[colors]
+background = #000
+foreground = #000
+primary = #f0d3fe
+primary-alt = #a936b0
+secondary = #3a2e82
+
+[bar/main]
+enable-ipc=true
+width = 100%
+height = 4
+radius = 0
+fixed-center = false
+background = ${colors.background}
+foreground = ${colors.foreground}
+line-size = 4
+border-size = 0
+border-color = #00000000
+padding-left = 0
+padding-right = 2
+module-margin-left = 2
+module-margin-right = 2
+modules-left =
+modules-center = bspwm
+modules-right =
+tray-position = right
+tray-padding = 1
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[module/bspwm]
+type = internal/bspwm
+label-focused = ""
+label-focused-underline = ${colors.primary}
+label-focused-padding = 4
+label-occupied = ""
+label-occupied-underline = ${colors.primary-alt}
+label-occupied-padding = 4
+label-urgent = ""
+label-urgent-underline = ${colors.secondary}
+label-urgent-padding = 4
+label-empty = ""
+label-empty-underline = ${colors.secondary}
+label-empty-padding = 4
+
+; vim:ft=dosini
+

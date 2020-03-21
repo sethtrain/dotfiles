@@ -1,0 +1,46 @@
+# terminal emulator
+super + Return
+	termite
+
+# program launcher
+super + space
+	rofi -show drun -show-icons
+
+# restart bspwm
+super + shift + r
+    bspc wm -r
+
+# Kill window
+super + shift + q
+    xdo close
+
+# Fullscreen toggle
+super + f
+    bspc-fullscreen
+
+# swap the current node and the biggest node
+super + g
+	bspc node -s biggest
+
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus the next/previous node in the current desktop
+super + {_,shift + }c
+	bspc node -f {next,prev}.local
+
+# focus the last node/desktop
+super + {grave,Tab}
+	bspc {node,desktop} -f last
+
+# focus the older or newer node in the focus history
+super + {o,i}
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
