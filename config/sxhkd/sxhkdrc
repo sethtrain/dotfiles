@@ -16,7 +16,7 @@ super + shift + q
 
 # Fullscreen toggle
 super + f
-    bspc-fullscreen
+    $HOME/bin/bspc-fullscreen
 
 # swap the current node and the biggest node
 super + g
