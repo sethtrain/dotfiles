@@ -19,9 +19,9 @@
 [colors]
 background = #000
 foreground = #000
-primary = #f0d3fe
-primary-alt = #a936b0
-secondary = #3a2e82
+selected = #00c0f9
+occupied = #006af9
+empty = #1b02a3
 
 [bar/main]
 enable-ipc=true
@@ -49,16 +49,16 @@ cursor-scroll = ns-resize
 [module/bspwm]
 type = internal/bspwm
 label-focused = ""
-label-focused-underline = ${colors.primary}
+label-focused-underline = ${colors.selected}
 label-focused-padding = 4
 label-occupied = ""
-label-occupied-underline = ${colors.primary-alt}
+label-occupied-underline = ${colors.occupied}
 label-occupied-padding = 4
 label-urgent = ""
-label-urgent-underline = ${colors.secondary}
+label-urgent-underline = ${colors.empty}
 label-urgent-padding = 4
 label-empty = ""
-label-empty-underline = ${colors.secondary}
+label-empty-underline = ${colors.empty}
 label-empty-padding = 4
 
 ; vim:ft=dosini
