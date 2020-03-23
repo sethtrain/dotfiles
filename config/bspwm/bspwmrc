@@ -3,10 +3,10 @@
 # Autostart
 sxhkd &
 fusuma &
+picom &
 xmodmap ~/.Xmodmap
 xbindkeys
 nitrogen --restore
-picom &
 $HOME/.config/polybar/launch.sh
 
 # bspwm configuration
@@ -16,15 +16,13 @@ bspc config border_width         1
 bspc config window_gap           10
 
 # Border colors
-bspc config normal_border_color "#a936b0"
-bspc config focused_border_color "#f0d3fe"
+bspc config normal_border_color "#006af9"
+bspc config focused_border_color "#00c0f9"
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 bspc config focus_follows_pointer true
-bspc config ignore_ewmh_fullscreen enter
 
-bspc rule -a org-knopflerfish-framework-BundleThread desktop='^3' state=floating follow=on
-
+# External Rules
