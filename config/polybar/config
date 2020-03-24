@@ -17,8 +17,8 @@
 ;==========================================================
 
 [colors]
-background = #000
-foreground = #000
+background = #00000000
+foreground = #00000000
 selected = #00c0f9
 occupied = #006af9
 empty = #1b02a3
