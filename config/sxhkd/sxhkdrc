@@ -43,5 +43,5 @@ super + t
     notify-send $(date +%I:%H)
 
 super + b
-    notify-send $(battery)
+    notify-send $(cat /sys/class/power_supply/BAT0/capacity)
 
