@@ -4,7 +4,7 @@ super + Return
 
 # program launcher
 super + space
-	rofi -show drun -show-icons
+	rofi -show drun -show-icons -font "DejaVu Mono 20"
 
 # make sxhkd reload its configuration files:
 super + `
@@ -46,10 +46,10 @@ super + {_,shift + }{1-9,0}
 super + v
     termite -e pulsemixer --name=PulseAudioMixer --class=PulseAudioMixer
 
-# Notification bindings
 super + t
-    notify-send $(date +%I:%H)
+    termite -e "tty-clock -t -f %m/%d/%Y -b -c" --name=Clock --class=Clock
 
+# Notification bindings
 super + b
     notify-send $(cat /sys/class/power_supply/BAT0/capacity)
 

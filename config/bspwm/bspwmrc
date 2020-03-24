@@ -26,4 +26,6 @@ bspc config gapless_monocle      true
 
 # External Rules
 bspc rule -a PulseAudioMixer state=floating follow=on center=on
+bspc rule -a Clock state=floating follow=on center=on
+bspc rule -a zoom desktop=^4 follow=on
 
