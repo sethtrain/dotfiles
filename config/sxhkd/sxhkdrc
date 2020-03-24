@@ -7,7 +7,7 @@ super + space
 	rofi -show drun -show-icons
 
 # make sxhkd reload its configuration files:
-super + Escape
+super + `
 	pkill -USR1 -x sxhkd
 
 # restart bspwm
@@ -42,7 +42,11 @@ super + {grave,Tab}
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
-# Notification tasks
+# Application bindings
+super + v
+    termite -e pulsemixer --name=PulseAudioMixer --class=PulseAudioMixer
+
+# Notification bindings
 super + t
     notify-send $(date +%I:%H)
 

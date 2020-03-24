@@ -4,6 +4,7 @@
 sxhkd &
 fusuma &
 picom &
+xrdb ~/.Xresources
 xmodmap ~/.Xmodmap
 xbindkeys
 nitrogen --restore
@@ -24,3 +25,5 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 # External Rules
+bspc rule -a PulseAudioMixer state=floating follow=on center=on
+
