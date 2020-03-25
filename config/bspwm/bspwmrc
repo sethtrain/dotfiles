@@ -2,7 +2,6 @@
 
 # Autostart
 sxhkd &
-fusuma &
 picom &
 xrdb ~/.Xresources
 xmodmap ~/.Xmodmap
