@@ -3,6 +3,7 @@
 # Autostart
 sxhkd &
 picom &
+xset r rate 200 25
 xrdb ~/.Xresources
 xmodmap ~/.Xmodmap
 xbindkeys
